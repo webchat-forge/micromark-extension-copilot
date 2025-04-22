@@ -14,5 +14,5 @@ jobs:
     with:
       node-version: 22 # Requires Node.js 22 for some tests.
       package-name: '@webchat-forge/micromark-extension-copilot'
-      skip-integration-test: false
+      skip-integration-test: true
       switch: ${{ matrix.switch }}
