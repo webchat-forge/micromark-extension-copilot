@@ -5,6 +5,7 @@
   "files": [
     "./dist/"
   ],
+  "main": "./dist/micromark-extension-copilot.mjs",
   "exports": {
     ".": {
       "import": {
