@@ -1,5 +1,6 @@
 import { micromark } from 'micromark';
 import { copilot, copilotHtml } from '../src/index';
+import { describe, expect, it } from 'vitest';
 
 describe('math extension', () => {
   const render = (markdown: string) =>

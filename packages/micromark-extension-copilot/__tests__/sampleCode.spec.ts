@@ -1,5 +1,6 @@
 import { micromark } from 'micromark';
 import { copilot, copilotHtml } from '../src/index';
+import { describe, expect, test, beforeEach } from 'vitest';
 
 describe('with copilot extension', () => {
   let result: string;

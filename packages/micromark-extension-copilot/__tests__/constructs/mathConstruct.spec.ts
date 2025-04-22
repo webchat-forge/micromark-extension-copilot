@@ -30,7 +30,7 @@ describe('createMathConstruct', () => {
     const construct = createMathConstruct(mockTokenizerFn);
     
     // Create a mock context
-    const mockContext = { foo: 'bar' };
+    const mockContext = { foo: 'bar' } as any;
     
     // Mock effects, ok and nok functions
     const mockEffects = {};
