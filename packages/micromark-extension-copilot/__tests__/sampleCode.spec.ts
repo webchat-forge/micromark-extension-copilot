@@ -21,6 +21,12 @@ $$
   });
 
   test('should transform LaTeX in $$', () => {
-    expect(result).toEqual('<h1>LaTeX</h1>\n<p>$$\n\\frac{1}{2}\n$$</p>\n');
+    expect(result).toMatchInlineSnapshot(`
+      "<h1>LaTeX</h1>
+      <pre class="math-block" data-math-type="block"><code>
+      \\frac{1}{2}
+      </code></pre>
+      "
+    `);
   });
 });

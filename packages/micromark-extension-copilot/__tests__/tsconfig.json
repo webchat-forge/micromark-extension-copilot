@@ -6,8 +6,5 @@
       "ESNext"
     ],
     "jsx": "react",
-    "types": [
-      "jest"
-    ]
   }
 }
