@@ -40,7 +40,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.6.3",
-    "vite": "^5.0.12"
+    "vite": "^6.3.2"
   },
   "dependencies": {
     "@webchat-forge/micromark-extension-copilot": "^0.0.0-0",
