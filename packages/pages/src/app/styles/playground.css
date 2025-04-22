@@ -1,0 +1,218 @@
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Playground Layout */
+.playground {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.playground-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.playground-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary-600);
+}
+
+.playground-header p {
+  color: var(--color-text-secondary);
+}
+
+.playground-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  min-height: 400px;
+}
+
+/* Editor Styles */
+.playground-editor {
+  contain: size;
+  display: flex;
+}
+
+.editor {
+  position: relative;
+  min-height: 400px;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background-color: var(--color-bg-secondary);
+  transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.editor:focus-within {
+  border-color: var(--color-primary-500);
+}
+
+.editor-textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  padding: 1rem;
+  border: none;
+  resize: vertical;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: transparent;
+  color: var(--color-text-primary);
+  overflow-y: auto;
+}
+
+.editor-textarea:focus {
+  outline: none;
+}
+
+/* Resize Handle */
+.editor-textarea::-webkit-resizer {
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent var(--color-primary-300) var(--color-primary-300) transparent;
+  background: transparent;
+}
+
+/* Preview Styles */
+.preview {
+  min-height: 400px;
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  overflow-y: auto;
+  background-color: var(--color-bg-secondary);
+}
+
+.preview-content {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Example Panel Styles */
+.example-panel {
+  padding: 1.5rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+}
+
+.example-panel h2 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-600);
+  font-size: 1.5rem;
+}
+
+.examples-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.example-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  height: 100%;
+}
+
+.example-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.example-item h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-600);
+}
+
+.example-item p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.example-button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-primary-600);
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: auto;
+}
+
+.example-button:hover {
+  background-color: var(--color-primary-700);
+}
+
+.example-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary-200);
+}
+
+/* Math Styles */
+.math-inline {
+  background-color: var(--color-bg-secondary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono);
+}
+
+.math-block {
+  background-color: var(--color-bg-secondary);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+/* Error Box Styles */
+.error-box {
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.error-box h3 {
+  color: var(--color-error-text);
+  margin: 0 0 0.5rem 0;
+}
+
+.error-message {
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--color-error-text);
+}

@@ -1,0 +1,52 @@
+:root {
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  
+  /* Colors - Light Theme */
+  --color-primary-50: #f5f3ff;
+  --color-primary-100: #ede9fe;
+  --color-primary-200: #ddd6fe;
+  --color-primary-300: #c4b5fd;
+  --color-primary-400: #a78bfa;
+  --color-primary-500: #8b5cf6;
+  --color-primary-600: #7c3aed;
+  --color-primary-700: #6d28d9;
+  --color-primary-800: #5b21b6;
+  --color-primary-900: #4c1d95;
+
+  /* Neutral Colors - Light Theme */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8f9fa;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a5568;
+  --color-border: #e2e8f0;
+
+  /* Semantic Colors - Light Theme */
+  --color-error-bg: #fff5f5;
+  --color-error-border: #feb2b2;
+  --color-error-text: #c53030;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Neutral Colors - Dark Theme */
+    --color-bg-primary: #1a1a1a;
+    --color-bg-secondary: #2d2d2d;
+    --color-text-primary: #f7fafc;
+    --color-text-secondary: #a0aec0;
+    --color-border: #4a5568;
+
+    /* Semantic Colors - Dark Theme */
+    --color-error-bg: #2d2121;
+    --color-error-border: #742a2a;
+    --color-error-text: #fc8181;
+  }
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
