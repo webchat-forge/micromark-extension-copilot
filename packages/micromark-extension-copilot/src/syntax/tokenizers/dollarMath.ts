@@ -1,7 +1,7 @@
-import { DOLLAR, TOKEN_TYPE_MATH_BLOCK, TOKEN_TYPE_MATH_INLINE } from '../constants';
-import { createMathTokenizer } from './createMathTokenizer';
-import { type TokenizeContext } from 'micromark-util-types';
 import { markdownLineEnding } from 'micromark-util-character';
+import { type TokenizeContext } from 'micromark-util-types';
+import { DOLLAR, TOKEN_TYPE_MATH_BLOCK, TOKEN_TYPE_MATH_INLINE } from '../constants.ts';
+import { createMathTokenizer } from './createMathTokenizer.ts';
 
 export const tokenizeDollarMath = createMathTokenizer({
   triggerCode: DOLLAR,

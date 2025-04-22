@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useMathMarkdown } from '../hooks/useMathMarkdown';
-import { ErrorBox } from './ErrorBox';
+import { useMathMarkdown } from '../hooks/useMathMarkdown.ts';
+import { ErrorBox } from './ErrorBox.tsx';
 
 interface PreviewProps {
   markdown: string;
@@ -28,10 +28,7 @@ export const Preview: React.FC<PreviewProps> = ({ markdown }) => {
       {error ? (
         <ErrorBox error={error} />
       ) : (
-        <div
-          className="preview-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="preview-content" dangerouslySetInnerHTML={{ __html: html }} />
       )}
     </div>
   );

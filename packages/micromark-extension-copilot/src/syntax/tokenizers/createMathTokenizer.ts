@@ -1,7 +1,7 @@
-import { type Code, type State, type TokenizeContext } from 'micromark-util-types';
-import { BACKSLASH, DOLLAR, TOKEN_TYPE_MATH_CHUNK } from '../constants';
-import { createCloseDelimiterConstruct } from './closeDelimiter';
 import { markdownLineEnding } from 'micromark-util-character';
+import { type Code, type State, type TokenizeContext } from 'micromark-util-types';
+import { BACKSLASH, DOLLAR, TOKEN_TYPE_MATH_CHUNK } from '../constants.ts';
+import { createCloseDelimiterConstruct } from './closeDelimiter.ts';
 
 interface TokenizerConfig {
   triggerCode: typeof BACKSLASH | typeof DOLLAR;
@@ -69,11 +69,7 @@ export function createMathTokenizer(config: TokenizerConfig) {
       }
 
       if (code === triggerCode && !escaped) {
-        return effects.check(
-          closeDelimiterConstruct,
-          afterTriggerClose,
-          consumeContent
-        )(code);
+        return effects.check(closeDelimiterConstruct, afterTriggerClose, consumeContent)(code);
       }
 
       openContent();
@@ -108,11 +104,11 @@ export function createMathTokenizer(config: TokenizerConfig) {
         effects.exit('mathContent');
         effects.exit(currentTokenType);
       }
-      
+
       // Open fence token and consume trigger
       effects.enter('mathFence');
       effects.consume(code);
-      
+
       // Move to consuming the closing delimiter
       return consumeClose;
     }
@@ -120,11 +116,11 @@ export function createMathTokenizer(config: TokenizerConfig) {
     function consumeClose(code: Code): State | undefined {
       // Consume the closing delimiter
       effects.consume(code);
-      
+
       // Close fence and math tokens
       effects.exit('mathFence');
       effects.exit('math');
-      
+
       return ok;
     }
   };

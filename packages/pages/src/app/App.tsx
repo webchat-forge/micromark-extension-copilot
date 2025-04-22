@@ -1,5 +1,6 @@
 import React from 'react';
-import { Playground } from './components/Playground';
+import { Playground } from './components/Playground.tsx';
+
 import './styles/theme.css';
 import './styles/scrollbars.css';
 import './styles/playground.css';

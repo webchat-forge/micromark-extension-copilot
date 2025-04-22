@@ -1,5 +1,5 @@
 import React, { type ChangeEvent } from 'react';
-import { EditorTextArea } from './EditorTextArea';
+import { EditorTextArea } from './EditorTextArea.tsx';
 
 interface EditorProps {
   onChange: (value: string) => void;

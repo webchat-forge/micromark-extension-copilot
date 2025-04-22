@@ -17,12 +17,15 @@ export const useMathMarkdown = () => {
     }
   }, []);
 
-  const renderMarkdown = useCallback((markdown: string): string => {
-    return micromark(markdown, 'utf-8', {
-      extensions: [copilot()],
-      htmlExtensions: [copilotHtml({ renderMath })]
-    });
-  }, [renderMath]);
+  const renderMarkdown = useCallback(
+    (markdown: string): string => {
+      return micromark(markdown, 'utf-8', {
+        extensions: [copilot()],
+        htmlExtensions: [copilotHtml({ renderMath })]
+      });
+    },
+    [renderMath]
+  );
 
   return { renderMarkdown };
 };

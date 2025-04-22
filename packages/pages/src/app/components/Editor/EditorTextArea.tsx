@@ -6,10 +6,5 @@ interface EditorTextAreaProps {
 }
 
 export const EditorTextArea: React.FC<EditorTextAreaProps> = ({ onChange, value }) => (
-  <textarea
-    className="editor-textarea"
-    onChange={onChange}
-    placeholder="Enter your LaTeX math here..."
-    value={value}
-  />
+  <textarea className="editor-textarea" onChange={onChange} placeholder="Enter your LaTeX math here..." value={value} />
 );

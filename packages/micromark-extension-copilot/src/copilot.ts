@@ -1,8 +1,8 @@
 import { type Extension } from 'micromark-util-types';
-import { BACKSLASH, DOLLAR } from './syntax/constants';
-import { blockMathConstruct } from './syntax/constructs/blockMathConstruct';
-import { dollarMathConstruct } from './syntax/constructs/dollarMathConstruct';
-import { inlineMathConstruct } from './syntax/constructs/inlineMathConstruct';
+import { BACKSLASH, DOLLAR } from './syntax/constants.ts';
+import { blockMathConstruct } from './syntax/constructs/blockMathConstruct.ts';
+import { dollarMathConstruct } from './syntax/constructs/dollarMathConstruct.ts';
+import { inlineMathConstruct } from './syntax/constructs/inlineMathConstruct.ts';
 
 export default function copilot(): Extension {
   return {

@@ -25,7 +25,7 @@ export const MATH_EXAMPLES = [
     content: quadratic
   },
   {
-    title: 'Einstein\'s Mass-Energy Equivalence',
+    title: "Einstein's Mass-Energy Equivalence",
     description: 'The famous E = mc² equation and its implications',
     content: einstein
   },
@@ -35,7 +35,7 @@ export const MATH_EXAMPLES = [
     content: basel
   },
   {
-    title: 'Euler\'s Identity',
+    title: "Euler's Identity",
     description: 'The most beautiful equation in mathematics',
     content: euler
   },

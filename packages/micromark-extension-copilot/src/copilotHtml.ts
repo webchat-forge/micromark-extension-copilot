@@ -1,5 +1,5 @@
-import { CompileContext, Token, type HtmlExtension } from 'micromark-util-types';
-import { TOKEN_TYPE_MATH_BLOCK, TOKEN_TYPE_MATH_INLINE } from './syntax/constants';
+import { type CompileContext, type Token, type HtmlExtension } from 'micromark-util-types';
+import { TOKEN_TYPE_MATH_BLOCK, TOKEN_TYPE_MATH_INLINE } from './syntax/constants.ts';
 
 interface RenderOptions {
   /**
@@ -12,7 +12,7 @@ interface RenderOptions {
 }
 
 function renderError(content: string, isBlock: boolean): string {
-  return isBlock 
+  return isBlock
     ? `<figure class="math-error" data-math-type="error" tabindex="0"><pre>${content}</pre></figure>`
     : `<span class="math-error" data-math-type="error"><code>${content}</code></span>`;
 }
@@ -23,13 +23,13 @@ function wrapMathContent(content: string, isBlock: boolean): string {
       ${content}
     </figure>`;
   }
-  
+
   return `<span class="math-inline" data-math-type="inline">${content}</span>`;
 }
 
 function renderContent(content: string, isBlock: boolean, renderMath?: RenderOptions['renderMath']): string {
   if (!renderMath) {
-    return isBlock 
+    return isBlock
       ? `<pre class="math-block" data-math-type="block"><code>${content}</code></pre>`
       : `<span class="math-inline" data-math-type="inline"><code>${content}</code></span>`;
   }
@@ -49,17 +49,11 @@ export default function copilotHtml(options: RenderOptions = {}): HtmlExtension 
   return {
     exit: {
       // @ts-expect-error math* are not known tokens in micromark
-      [TOKEN_TYPE_MATH_INLINE](
-        this: CompileContext,
-        token: Pick<Token, 'start' | 'end'>
-      ) {
+      [TOKEN_TYPE_MATH_INLINE](this: CompileContext, token: Pick<Token, 'start' | 'end'>) {
         const content = this.sliceSerialize(token);
         this.raw(renderContent(content, false, renderMath));
       },
-      [TOKEN_TYPE_MATH_BLOCK](
-        this: CompileContext,
-        token: Pick<Token, 'start' | 'end'>
-      ) {
+      [TOKEN_TYPE_MATH_BLOCK](this: CompileContext, token: Pick<Token, 'start' | 'end'>) {
         const content = this.sliceSerialize(token);
         this.raw(renderContent(content, true, renderMath));
       }
