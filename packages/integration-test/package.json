@@ -28,7 +28,21 @@
     }
   },
   "localPeerDependencies": {
-    "@webchat-forge/micromark-extension-copilot": "^0.0.0-0"
+    "@webchat-forge/micromark-extension-copilot": "0.0.0-0"
+  },
+  "pinDependencies": {
+    "@types/react": [
+      "18"
+    ],
+    "@types/react-dom": [
+      "18"
+    ],
+    "react": [
+      "18"
+    ],
+    "react-dom": [
+      "18"
+    ]
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.5",
@@ -45,7 +59,7 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@webchat-forge/micromark-extension-copilot": "^0.0.0-0",
+    "@webchat-forge/micromark-extension-copilot": "0.0.0-0",
     "micromark": "^4.0.1"
   }
 }

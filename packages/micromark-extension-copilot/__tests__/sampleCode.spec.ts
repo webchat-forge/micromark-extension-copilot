@@ -1,5 +1,9 @@
+/// <reference types="node" />
+
+import { expect } from 'expect';
 import { micromark } from 'micromark';
-import { copilot, copilotHtml } from '../src/index';
+import { beforeEach, describe, test } from 'node:test';
+import { copilot, copilotHtml } from '../src/index.ts';
 
 describe('with copilot extension', () => {
   let result: string;
