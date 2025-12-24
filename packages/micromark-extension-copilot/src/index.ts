@@ -1,4 +1,4 @@
-import copilot from './copilot';
-import copilotHtml from './copilotHtml';
+import copilot from './copilot.ts';
+import copilotHtml from './copilotHtml.ts';
 
 export { copilot, copilotHtml };
