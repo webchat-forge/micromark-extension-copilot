@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/webchat-forge/micromark-extension-copilot"
+    "url": "https://github.com/webchat-forge/micromark-extension-copilot.git"
   },
   "keywords": [
     "copilot",
