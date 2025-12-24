@@ -59,6 +59,12 @@
       "micromark": "4.0.0"
     }
   },
+  "pinDependencies": {
+    "@types/react": ["18"],
+    "@types/react-dom": ["18"],
+    "react": ["18"],
+    "react-dom": ["18"]
+  },
   "peerDependencies": {
     "micromark": ">=3.0.0"
   },
