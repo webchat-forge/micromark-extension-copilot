@@ -1,8 +1,7 @@
-/// <reference types="mocha" />
-
 import { copilot, copilotHtml } from '@webchat-forge/micromark-extension-copilot';
 import { expect } from 'expect';
 import { micromark } from 'micromark';
+import { beforeEach, describe, it } from 'node:test';
 
 const MARKDOWN = `# LaTeX
 
