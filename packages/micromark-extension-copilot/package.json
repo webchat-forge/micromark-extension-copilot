@@ -2,6 +2,9 @@
   "name": "@webchat-forge/micromark-extension-copilot",
   "version": "0.0.0-0",
   "description": "Micromark extension for Microsoft Copilot",
+  "main": "./dist/micromark-extension-copilot.mjs",
+  "typings": "./dist/micromark-extension-copilot.d.mts",
+  "type": "module",
   "files": [
     "./dist/"
   ],
